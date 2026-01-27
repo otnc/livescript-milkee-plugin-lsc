@@ -1,0 +1,4 @@
+*.coffee linguist-language=CoffeeScript
+*.litcoffee linguist-language=CoffeeScript
+*.ls linguist-language=LiveScript
+dist/* linguist-generated
