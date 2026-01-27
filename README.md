@@ -4,30 +4,49 @@ This is a plugin for [milkee](https://www.npmjs.com/package/milkee) .
 
 A tiny plugin for handling LiveScript in Milkee.
 
-## Usage
+## Install
 
-### setup
+```sh
+npm install --save-dev milkee-plugin-lsc livescript
+```
 
-#### coffee.config.cjs
+## Configuration Example
+
+
+
+
+In your `coffee.config.cjs` (`livescript` is required!):
 
 ```js
 const plugin = require('milkee-plugin-lsc');
+const livescript = require('livescript');
 
 module.exports = {
-  // ...
   milkee: {
     plugins: [
-      plugin(),
-      // ...
+      plugin({
+        livescript: livescript // REQUIRED: pass require('livescript')
+      })
     ]
   }
 }
 ```
 
-### Run
+## Options
+
+
+
+| Option      | Type   | Description                                    |
+| ----------- | ------ | :--------------------------------------------- |
+| livescript  | object | (Required) The result of require('livescript') |
+
+> **Note:**
+> Only the `livescript` property is accepted. All other properties (such as `output`, `entry`, `options`, etc.) are ignored.
+
+## Run
 
 ```sh
-milkee
-# or
 npx milkee
+# or
+milkee
 ```
