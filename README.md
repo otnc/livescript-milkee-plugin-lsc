@@ -40,7 +40,7 @@ module.exports = {
 | ----------- | ------ | :--------------------------------------------- |
 | livescript  | object | (Required) The result of require('livescript') |
 
-> **Note:**
+> [!Note]  
 > Only the `livescript` property is accepted. All other properties (such as `output`, `entry`, `options`, etc.) are ignored.
 
 ## Run
